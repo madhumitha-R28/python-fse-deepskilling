@@ -46,3 +46,33 @@ report, explained severity vs priority with a worked example.
 
 \*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/qa\_concepts.md
 
+## Day 3 — Mon Jun 22, 2026
+
+
+
+\*\*Track:\*\* Selenium HO2, Task 1 (V-Model Mapping)
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Drew the V-Model with all phase mappings, documented the test artifact 
+
+
+
+produced during each development phase, defined entry/exit criteria for all 4 testing 
+
+
+
+levels, identified 2 early QA engagement points on the left side of the V-Model.
+
+
+
+\*\*Takeaway:\*\* learnt about the process of v-model in which dev phase along with its corresponding test phase occurs simultaneously, though tests are executed later.which means only test plans are decided earlier during corresponding dev phase. then entry and exut criteria for each testing. then 2 engagement points of QA(quality assurance) in left dev phase.
+
+
+
+\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
+
