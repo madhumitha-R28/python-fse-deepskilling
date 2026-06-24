@@ -58,11 +58,11 @@ report, explained severity vs priority with a worked example.
 
 
 
-\*\*What I did:\*\* Drew the V-Model with all phase mappings, documented the test artifact 
+\*\*What I did:\*\* Drew the V-Model with all phase mappings, documented the test artifact
 
 
 
-produced during each development phase, defined entry/exit criteria for all 4 testing 
+produced during each development phase, defined entry/exit criteria for all 4 testing
 
 
 
@@ -71,6 +71,32 @@ levels, identified 2 early QA engagement points on the left side of the V-Model.
 
 
 \*\*Takeaway:\*\* learnt about the process of v-model in which dev phase along with its corresponding test phase occurs simultaneously, though tests are executed later.which means only test plans are decided earlier during corresponding dev phase. then entry and exut criteria for each testing. then 2 engagement points of QA(quality assurance) in left dev phase.
+
+
+
+\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
+
+## Day 4 — Tue Jun 23, 2026
+
+\*\*Track:\*\* Selenium HO2, Task 2 (Agile QA \& Shift-Left) — HO2 complete ✅
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Described 3 waterfall testing problems, mapped QA's role in all 4 Agile 
+
+ceremonies, applied 4 Shift-Left practices to the Course Management API, wrote 3 
+
+Given-When-Then Gherkin scenarios for the course creation user story.
+
+
+
+\*\*Takeaway:\*\* learnt about three problems with waterfall testing.qa engineer role in each agile ceremony , then about shift left practices and atlast 3 scenarios in integration testing 
+
+
 
 
 
