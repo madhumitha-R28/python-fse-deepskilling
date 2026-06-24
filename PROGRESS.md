@@ -86,19 +86,50 @@ levels, identified 2 early QA engagement points on the left side of the V-Model.
 
 
 
-\*\*What I did:\*\* Described 3 waterfall testing problems, mapped QA's role in all 4 Agile 
+\*\*What I did:\*\* Described 3 waterfall testing problems, mapped QA's role in all 4 Agile
 
-ceremonies, applied 4 Shift-Left practices to the Course Management API, wrote 3 
+ceremonies, applied 4 Shift-Left practices to the Course Management API, wrote 3
 
 Given-When-Then Gherkin scenarios for the course creation user story.
 
 
 
-\*\*Takeaway:\*\* learnt about three problems with waterfall testing.qa engineer role in each agile ceremony , then about shift left practices and atlast 3 scenarios in integration testing 
+\*\*Takeaway:\*\* learnt about three problems with waterfall testing.qa engineer role in each agile ceremony , then about shift left practices and atlast 3 scenarios in integration testing.
 
 
 
 
 
 \*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
+
+
+\## Day 5 — Wed Jun 24, 2026
+
+
+
+\*\*Track:\*\* Selenium HO3, Task 1 (Automation Decision \& ROI)
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Applied 5 automation criteria to POST /api/courses/, classified 6 test cases 
+
+
+
+as Automate/Manual with justifications, calculated automation break-even at 8 runs with 
+
+
+
+maintenance overhead analysis, explained flaky tests with 3 fix strategies.
+
+
+
+\*\*Takeaway:\*\* learnt about 5 criterias to check for automation eligibility.automate vs manual.automation ROI calculation and flaky test.
+
+
+
+\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/automation\_strategy.md
 
