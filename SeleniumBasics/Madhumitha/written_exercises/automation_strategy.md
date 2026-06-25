@@ -174,3 +174,151 @@ pytest --reruns 2 --reruns-delay 1
 ```
 
 A test that needs 3 retries to pass consistently is telling you there's a timing or isolation problem that needs to be fixed, not masked. Track retry counts over time — if a test consistently needs retries, it goes on the "fix or delete" list.
+
+---
+
+## Task 2: Compare Automation Framework Types
+
+---
+
+### 1. Five Framework Types — Structured Comparison
+
+---
+
+#### Linear (Record & Playback) Framework
+
+**Description:** The simplest possible framework — test steps are written or recorded sequentially in a single script with no abstraction, no reuse, and no separation of concerns. Each test is a standalone script: open browser, click this, type that, assert this, close browser. Everything is hardcoded — URLs, test data, locators, and logic all live together in one flat file.
+
+**Advantage:** Zero setup cost and no prerequisite knowledge — a tester with basic Python can write a working test in 10 minutes. Useful for quickly verifying a single workflow or generating a first proof-of-concept.
+
+**Disadvantage:** Zero reusability and extremely high maintenance cost. If the login button's ID changes, you update it in every single test script individually. At 20 test cases, this is painful. At 200, it's unmanageable.
+
+**When you'd use it for Course Management:** As a one-off sanity check during initial development — *"Does the course creation form actually submit?"* You write it once, run it once, then throw it away. Never as a long-term suite.
+
+---
+
+#### Modular Framework
+
+**Description:** Test logic is broken into independent, reusable functions or classes — one for login, one for course creation, one for navigation. Each test assembles its workflow by calling these modules rather than rewriting the same steps. If the login flow changes, you fix one module and all 20 tests that use it are automatically updated.
+
+**Advantage:** High reusability and low maintenance overhead. A fix in one module propagates everywhere automatically. Tests read clearly because they're composed of named actions rather than raw Selenium calls.
+
+**Disadvantage:** All test data is still hardcoded inside the modules or test files. To test login with 50 different user/password combinations, you'd need 50 test functions or 50 calls — there's no built-in mechanism for parameterisation.
+
+**When you'd use it for Course Management:** When building a small-to-medium regression suite where each test covers a distinct workflow (create course, enroll student, delete course) and the team has at least basic programming familiarity. A solid default for a team starting their first real automation suite.
+
+---
+
+#### Data-Driven Framework
+
+**Description:** Separates test logic from test data. The test script defines *what to do*, and an external data source (CSV, Excel, JSON, pytest parametrize) defines *what data to use*. The same test function runs once per row in the data file — so 50 login combinations become 50 test executions from one test function and one data file.
+
+**Advantage:** Dramatically reduces script count for data-heavy validation. Adding a new test case means adding a row to a spreadsheet, not writing new code — which also means non-technical team members can contribute test data.
+
+**Disadvantage:** Requires discipline in data file management. If test data files get out of sync with the application (e.g., a department ID in the CSV references a department that no longer exists in the test DB), tests fail for infrastructure reasons rather than real defects — confusing and time-consuming to diagnose.
+
+**When you'd use it for Course Management:** For the `POST /api/courses/` endpoint validation suite — one test function, one JSON file containing valid payloads, missing-field payloads, boundary-value payloads, duplicate-code payloads. Covers all input combinations cleanly.
+
+---
+
+#### Keyword-Driven Framework
+
+**Description:** Test steps are abstracted into human-readable keywords stored in a table or spreadsheet — `OPEN_BROWSER`, `NAVIGATE_TO`, `ENTER_TEXT`, `CLICK_BUTTON`, `ASSERT_VISIBLE`. A driver script reads the keyword table and executes the corresponding function for each keyword. Test cases are written as keyword sequences, not code — so a non-technical tester can write new tests by combining keywords without touching Python.
+
+**Advantage:** Non-technical team members (business analysts, manual testers, product owners) can write and read test cases without programming knowledge. Tools like Robot Framework implement this pattern natively.
+
+**Disadvantage:** High initial setup cost — someone has to build and maintain the keyword library. Debugging failures requires tracing through the keyword-to-function mapping, which adds indirection. For a purely technical team, this abstraction layer adds complexity without proportional benefit.
+
+**When you'd use it for Course Management:** In a large enterprise team where business analysts need to write acceptance tests against the admin portal, and they cannot (or should not need to) write Python. Robot Framework with a custom Course Management keyword library would let them write: `Login As Admin`, `Create Course CS301`, `Assert Course Exists CS301` — no code.
+
+---
+
+#### Hybrid Framework
+
+**Description:** Combines the strengths of Modular, Data-Driven, and optionally Keyword-Driven into a single architecture. Page Object Model (POM) provides modular, reusable page abstractions. External data files provide parameterisation. A clear folder structure separates concerns — pages, tests, data, utilities, configuration. This is the pattern used on virtually every real-world professional Selenium project.
+
+**Advantage:** Maximum flexibility and scalability. Reusable page objects reduce maintenance, parameterised data files handle multiple scenarios efficiently, and the clean folder structure makes onboarding new team members straightforward. Easy to extend without restructuring.
+
+**Disadvantage:** Highest initial setup time of all five types. A junior tester joining the project needs to understand POM, pytest fixtures, and the folder conventions before contributing. Not appropriate for a 2-day automation spike.
+
+**When you'd use it for Course Management:** For the full production test suite covering the Course Management frontend portal — login, course CRUD, enrollment, admin dashboard. This is the correct architecture for any suite expected to run in CI/CD and be maintained for more than one sprint.
+
+---
+
+### 2. Framework Recommendation for the Team Scenario
+
+**Scenario requirements:**
+- Test login with 50 different user/password combinations
+- Reuse login steps across 20 test cases
+- Support both technical and non-technical team members writing tests
+
+**Recommendation: Hybrid Framework (Data-Driven + Modular/POM foundation, with Keyword-Driven layer for non-technical contributors)**
+
+No single framework type covers all three requirements — that's the exact situation Hybrid is designed for:
+
+**Requirement 1 — 50 login combinations:** Pure Data-Driven. One `test_login()` function, one `login_data.json` file with 50 rows. Adding combination #51 means adding one JSON entry, not writing new code.
+
+**Requirement 2 — Reuse login steps across 20 test cases:** Modular POM. A `LoginPage` class encapsulates all login interactions — `enter_username()`, `enter_password()`, `click_login()`, `get_error_message()`. All 20 test cases call `login_page.login(username, password)`. If the login button's locator changes, one line in `LoginPage` fixes all 20 tests.
+
+**Requirement 3 — Non-technical members writing tests:** Add a lightweight keyword layer (or use Robot Framework's `.robot` syntax) on top of the POM. Non-technical team members write test scenarios using named keywords; the framework maps those keywords to the POM methods underneath. Technical members maintain the keyword library; non-technical members consume it.
+
+Trying to solve all three requirements with a pure Modular or pure Data-Driven framework means fighting against the tool. Hybrid is not a compromise — it's the purpose-built solution for exactly this combination of requirements.
+
+---
+
+### 3. Hybrid Framework Folder Structure — Course Management Frontend
+
+```
+course_management_tests/
+│
+├── config/
+│   ├── config.py               # base URL, browser type, timeout values, environment flags
+│   └── conftest.py             # pytest session/module/function scoped fixtures
+│                               # (driver setup/teardown, test client, DB seeding)
+│
+├── pages/                      # Page Object Model — one class per page/component
+│   ├── base_page.py            # BaseClass: driver init, common wait helpers,
+│   │                           # find_element wrapper with explicit wait built in
+│   ├── login_page.py           # LoginPage: enter_username(), enter_password(),
+│   │                           # click_login(), get_error_message()
+│   ├── course_list_page.py     # CourseListPage: get_courses(), search_course(),
+│   │                           # click_create_new()
+│   ├── course_form_page.py     # CourseFormPage: fill_form(), submit(), get_errors()
+│   └── dashboard_page.py       # DashboardPage: get_welcome_message(), navigate_to()
+│
+├── test_data/                  # All external data — never hardcoded in test files
+│   ├── login_valid.json        # 50 valid user/password combinations
+│   ├── login_invalid.json      # invalid credentials, locked accounts, expired tokens
+│   ├── course_valid.json       # valid course payloads for creation tests
+│   └── course_invalid.json     # missing fields, duplicate codes, boundary values
+│
+├── tests/                      # Actual test files — thin, readable, use pages + data
+│   ├── test_login.py           # parametrized with login_valid.json + login_invalid.json
+│   ├── test_course_crud.py     # create / read / update / delete using CourseFormPage
+│   ├── test_enrollment.py      # enrollment workflow tests
+│   └── test_smoke.py           # 3–5 critical path tests, runs in < 60 seconds
+│
+├── utilities/                  # Shared helpers — not page-specific
+│   ├── wait_helpers.py         # custom explicit wait wrappers (element_clickable, etc.)
+│   ├── screenshot_helper.py    # auto-screenshot on test failure (pytest hook)
+│   ├── data_loader.py          # load_json(filename) utility used by all test files
+│   └── api_helper.py           # direct API calls for test setup (seed a course via API
+│                               # rather than clicking through the UI every time)
+│
+├── reports/                    # Generated output — gitignored except sample
+│   └── report.html             # pytest-html report output
+│
+├── requirements.txt            # selenium, pytest, pytest-html, webdriver-manager,
+│                               # pytest-rerunfailures, Faker (for test data generation)
+│
+└── README.md                   # How to install, configure, and run the suite locally
+                                # and in CI (GitHub Actions example included)
+```
+
+**Key design decisions in this structure worth explaining:**
+
+`base_page.py` centralises all raw Selenium calls. No test file ever calls `driver.find_element()` directly — they all go through `BasePage` methods that have explicit waits built in. This is the single most important architectural decision for preventing flaky tests at scale.
+
+`utilities/api_helper.py` is often overlooked but critical for speed. Setting up a test that creates 10 courses through the UI takes 3 minutes of Selenium clicks. Setting them up via `POST /api/courses/` takes 2 seconds. Use the API for test data setup, use the UI only for the thing you're actually testing.
+
+`conftest.py` manages the driver lifecycle. The `driver` fixture is session or function scoped depending on the test — session-scoped for read-only smoke tests (faster), function-scoped for tests that mutate state (isolated). This avoids the classic problem of a failed test leaving dirty state that breaks the next test.

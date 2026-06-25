@@ -103,6 +103,7 @@ Given-When-Then Gherkin scenarios for the course creation user story.
 \*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
 
 
+
 \## Day 5 — Wed Jun 24, 2026
 
 
@@ -115,11 +116,11 @@ Given-When-Then Gherkin scenarios for the course creation user story.
 
 
 
-\*\*What I did:\*\* Applied 5 automation criteria to POST /api/courses/, classified 6 test cases 
+\*\*What I did:\*\* Applied 5 automation criteria to POST /api/courses/, classified 6 test cases
 
 
 
-as Automate/Manual with justifications, calculated automation break-even at 8 runs with 
+as Automate/Manual with justifications, calculated automation break-even at 8 runs with
 
 
 
@@ -128,6 +129,36 @@ maintenance overhead analysis, explained flaky tests with 3 fix strategies.
 
 
 \*\*Takeaway:\*\* learnt about 5 criterias to check for automation eligibility.automate vs manual.automation ROI calculation and flaky test.
+
+
+
+\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/automation\_strategy.md
+
+## Day 6 — Thu Jun 25, 2026
+
+
+
+\*\*Track:\*\* Selenium HO3, Task 2 (Framework Types) — HO3 complete ✅
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Compared all 5 automation framework types with advantages, disadvantages 
+
+
+
+and Course Management examples, recommended Hybrid for the team scenario with justification 
+
+
+
+for each requirement, described complete hybrid folder structure with design rationale.
+
+
+
+\*\*Takeaway:\*\* learnt abt 5 different automation types
 
 
 
