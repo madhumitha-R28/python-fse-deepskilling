@@ -146,11 +146,11 @@ maintenance overhead analysis, explained flaky tests with 3 fix strategies.
 
 
 
-\*\*What I did:\*\* Compared all 5 automation framework types with advantages, disadvantages 
+\*\*What I did:\*\* Compared all 5 automation framework types with advantages, disadvantages
 
 
 
-and Course Management examples, recommended Hybrid for the team scenario with justification 
+and Course Management examples, recommended Hybrid for the team scenario with justification
 
 
 
@@ -163,4 +163,56 @@ for each requirement, described complete hybrid folder structure with design rat
 
 
 \*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/automation\_strategy.md
+
+
+
+## Day 7 — Fri Jun 26, 2026
+
+
+
+\*\*Track:\*\* Environment Setup (no submission file)
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Fixed MySQL and MongoDB PATH entries via Windows Environment Variables,
+
+installed selenium/pytest/pytest-html/webdriver-manager, verified all tools from CMD.
+
+
+
+\*\*Takeaway:\*\* PATH issues are silent failures — always verify with --version after install.
+
+
+
+\*\*Files:\*\* None
+
+## Day 8 — Sat Jun 27, 2026
+
+
+
+\*\*Track:\*\* Database HO1 — Schema Design \& DDL ✅ Complete
+
+
+
+\*\*Time spent:\*\* \~50 min
+
+
+
+\*\*What I did:\*\* Created college\_db with all 5 tables and FK constraints, documented 
+
+1NF/2NF/3NF analysis as SQL comments, ran all ALTER TABLE operations, inserted all 
+
+sample data. All 17 statements executed with 0 errors in MySQL 9.7.
+
+
+
+\*\*Takeaway:\*\* One thing to absorb today: the creation order. departments must come before students, courses, professors — and enrollments must come last because it references both students and courses. Getting FK order wrong is the most common first-day SQL mistake and MySQL will throw errno: 150 if you try to reference a table that doesn't exist yet. You'll never forget this after seeing it fail once.
+
+
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_1.sql
 
