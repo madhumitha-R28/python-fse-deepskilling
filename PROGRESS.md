@@ -202,9 +202,9 @@ installed selenium/pytest/pytest-html/webdriver-manager, verified all tools from
 
 
 
-\*\*What I did:\*\* Created college\_db with all 5 tables and FK constraints, documented 
+\*\*What I did:\*\* Created college\_db with all 5 tables and FK constraints, documented
 
-1NF/2NF/3NF analysis as SQL comments, ran all ALTER TABLE operations, inserted all 
+1NF/2NF/3NF analysis as SQL comments, ran all ALTER TABLE operations, inserted all
 
 sample data. All 17 statements executed with 0 errors in MySQL 9.7.
 
@@ -215,4 +215,32 @@ sample data. All 17 statements executed with 0 errors in MySQL 9.7.
 
 
 \*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_1.sql
+
+## Day 9 — Sun Jun 28, 2026
+
+
+
+\*\*Track:\*\* Frontend HO1, Tasks 1 \& 2 — HO1 complete ✅
+
+
+
+\*\*Time spent:\*\* \~45 min
+
+
+
+\*\*What I did:\*\* Built Student Portal skeleton with proper semantic elements 
+
+(header/nav/main/section/article/footer), applied CSS3 reset, flex header, 
+
+hero with hover button, course cards with box-shadow and border-radius.
+
+Validated HTML at W3C validator — zero errors.
+
+
+
+\*\*Takeaway:\*\* The validator catches structural HTML mistakes a browser won't — browsers are too forgiving, they silently fix broken HTML and render it anyway. So visually everything looks fine, but the underlying structure is wrong. Screen readers, search engines, and automated testing tools don't fix it silently — they break. Validation is how you prove your HTML is structurally sound, not just visually okay. 
+
+
+
+\*\*Files:\*\* Module2\_FrontendDev/Madhumitha/handson\_01/index.html + styles.css
 

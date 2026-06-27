@@ -1,0 +1,175 @@
+/* ============================================================
+   Digital Nurture 5.0 | Frontend HO1 | styles.css
+   Student Portal — HTML5 & CSS3 Foundations
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 8: CSS Reset
+   box-sizing: border-box means padding and border are included
+   inside the declared width — no unexpected overflow.
+   ------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 9: Body — base font, background, text colour
+   ------------------------------------------------------------ */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a1a2e;
+    line-height: 1.6;
+}
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 10: Header — flex layout, site name left, nav right
+   ------------------------------------------------------------ */
+header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 11: Nav links — inline, no bullets, hover state
+   ------------------------------------------------------------ */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav ul li a {
+    color: #c9d6e3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 12: Hero section — centred text, padding, button
+   ------------------------------------------------------------ */
+#hero {
+    text-align: center;
+    padding: 72px 32px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #ffffff;
+}
+
+#hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    color: #c9d6e3;
+    max-width: 560px;
+    margin: 0 auto 32px auto;
+}
+
+#hero button {
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* :hover pseudo-class — required by Task 2 Step 12 */
+#hero button:hover {
+    background-color: #ffffff;
+    color: #1a1a2e;
+}
+
+
+/* ------------------------------------------------------------
+   TASK 2 STEP 13: Courses section wrapper + .course-card
+   ------------------------------------------------------------ */
+#courses {
+    padding: 48px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#courses h2 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+    color: #1a1a2e;
+}
+
+/* .course-card class applied to each <article> */
+.course-card {
+    padding: 24px;
+    border: 1px solid #d1dce8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    transition: box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+}
+
+.course-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #0f3460;
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 14px;
+}
+
+.credits {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0f3460;
+    background-color: #e8f0fe;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+
+/* ------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------ */
+footer {
+    text-align: center;
+    padding: 20px 32px;
+    background-color: #1a1a2e;
+    color: #8899aa;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}

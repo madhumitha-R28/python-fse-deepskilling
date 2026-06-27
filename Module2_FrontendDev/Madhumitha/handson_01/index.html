@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — Digital Nurture 5.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER: site name + navigation -->
+    <header>
+        <div class="site-name">🎓 Student Portal</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#grades">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN: primary page content — only one <main> per page -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Your one-stop dashboard to track courses, grades, and academic progress.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <!-- COURSES SECTION -->
+        <section id="courses">
+            <h2>Your Enrolled Courses</h2>
+
+            <!-- <article> is correct here — each course card is self-contained content -->
+            <article class="course-card">
+                <h3>Data Structures &amp; Algorithms</h3>
+                <p>Master arrays, linked lists, trees, graphs, and complexity analysis.</p>
+                <span class="credits">Credits: 4</span>
+            </article>
+
+            <article class="course-card">
+                <h3>Database Management Systems</h3>
+                <p>Learn relational design, SQL queries, normalization, and transactions.</p>
+                <span class="credits">Credits: 3</span>
+            </article>
+
+            <article class="course-card">
+                <h3>Object Oriented Programming</h3>
+                <p>Apply encapsulation, inheritance, polymorphism, and design patterns.</p>
+                <span class="credits">Credits: 4</span>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Student Portal — Digital Nurture 5.0 | Python Full Stack Engineer Track</p>
+    </footer>
+
+</body>
+</html>
