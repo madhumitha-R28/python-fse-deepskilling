@@ -228,9 +228,9 @@ sample data. All 17 statements executed with 0 errors in MySQL 9.7.
 
 
 
-\*\*What I did:\*\* Built Student Portal skeleton with proper semantic elements 
+\*\*What I did:\*\* Built Student Portal skeleton with proper semantic elements
 
-(header/nav/main/section/article/footer), applied CSS3 reset, flex header, 
+(header/nav/main/section/article/footer), applied CSS3 reset, flex header,
 
 hero with hover button, course cards with box-shadow and border-radius.
 
@@ -238,9 +238,38 @@ Validated HTML at W3C validator — zero errors.
 
 
 
-\*\*Takeaway:\*\* The validator catches structural HTML mistakes a browser won't — browsers are too forgiving, they silently fix broken HTML and render it anyway. So visually everything looks fine, but the underlying structure is wrong. Screen readers, search engines, and automated testing tools don't fix it silently — they break. Validation is how you prove your HTML is structurally sound, not just visually okay. 
+\*\*Takeaway:\*\* The validator catches structural HTML mistakes a browser won't — browsers are too forgiving, they silently fix broken HTML and render it anyway. So visually everything looks fine, but the underlying structure is wrong. Screen readers, search engines, and automated testing tools don't fix it silently — they break. Validation is how you prove your HTML is structurally sound, not just visually okay.
 
 
 
 \*\*Files:\*\* Module2\_FrontendDev/Madhumitha/handson\_01/index.html + styles.css
+
+
+## Day 10 — Mon Jun 29, 2026
+
+
+
+\*\*Track:\*\* Database HO2 — DML, Joins \& Aggregations ✅ Complete
+
+
+
+\*\*Time spent:\*\* \~55 min
+
+
+
+\*\*What I did:\*\* INSERT/UPDATE/DELETE with row count verification, 5 single-table 
+
+queries with WHERE/ORDER BY/LIKE/GROUP BY, 5 join queries including LEFT JOIN + 
+
+IS NULL pattern for missing relationships, 5 aggregation queries with COUNT/AVG/
+
+ROUND and HAVING filter.
+
+
+
+\*\*Takeaway:\*\* worked in MySQL
+
+
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_2.sql
 
