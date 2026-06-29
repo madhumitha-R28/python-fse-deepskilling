@@ -290,7 +290,7 @@ ROUND and HAVING filter.
 
 created vw\_student\_enrollment\_summary with CASE-based GPA conversion and WITH CHECK OPTION,
 
-wrote sp\_enroll\_student with duplicate check, sp\_transfer\_student with full transaction 
+wrote sp\_enroll\_student with duplicate check, sp\_transfer\_student with full transaction
 
 and EXIT HANDLER rollback, tested SAVEPOINT partial rollback pattern.
 
@@ -301,4 +301,34 @@ and EXIT HANDLER rollback, tested SAVEPOINT partial rollback pattern.
 
 
 \*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_3.sql
+
+## Day 12 — Wed Jul 1, 2026
+
+
+
+\*\*Track:\*\* Database HO4 — Indexes, EXPLAIN \& N+1 Problem ✅ Complete
+
+
+
+\*\*Time spent:\*\* \~50 min
+
+
+
+\*\*What I did:\*\* Ran EXPLAIN before/after indexes, created B-Tree index on enrollment\_year,
+
+composite UNIQUE index on enrollments(student\_id, course\_id), index on course\_code,
+
+documented partial index concept with MySQL equivalent. Wrote Python script demonstrating
+
+N+1 (13 queries) vs optimised JOIN (1 query) with Django ORM translation.
+
+
+
+\*\*Takeaway:\*\* This one has two output files — hands\_on\_4.sql for the SQL work and n\_plus\_one\_demo.py for the Python comparison.
+
+Why this matters more than any other DB hands-on: The N+1 problem is the single most common performance bug introduced by developers using ORMs. Django's ORM does lazy loading by default — every time you access enrollment.student inside a loop, it silently fires a separate SQL query. On 10 rows in development it's invisible. On 10,000 rows in production it's 10,001 queries instead of 1, and your API response time goes from 50ms to 30 seconds. This is the thing that makes senior engineers wince when they see a junior's code.
+
+
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_4.sql + n\_plus\_one\_demo.py
 
