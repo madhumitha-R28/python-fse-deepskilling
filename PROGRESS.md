@@ -245,6 +245,7 @@ Validated HTML at W3C validator — zero errors.
 \*\*Files:\*\* Module2\_FrontendDev/Madhumitha/handson\_01/index.html + styles.css
 
 
+
 ## Day 10 — Mon Jun 29, 2026
 
 
@@ -257,9 +258,9 @@ Validated HTML at W3C validator — zero errors.
 
 
 
-\*\*What I did:\*\* INSERT/UPDATE/DELETE with row count verification, 5 single-table 
+\*\*What I did:\*\* INSERT/UPDATE/DELETE with row count verification, 5 single-table
 
-queries with WHERE/ORDER BY/LIKE/GROUP BY, 5 join queries including LEFT JOIN + 
+queries with WHERE/ORDER BY/LIKE/GROUP BY, 5 join queries including LEFT JOIN +
 
 IS NULL pattern for missing relationships, 5 aggregation queries with COUNT/AVG/
 
@@ -272,4 +273,32 @@ ROUND and HAVING filter.
 
 
 \*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_2.sql
+
+## Day 11 — Tue Jun 30, 2026
+
+
+
+\*\*Track:\*\* Database HO3 — Subqueries, Views \& Transactions ✅ Complete
+
+
+
+\*\*Time spent:\*\* \~55 min
+
+
+
+\*\*What I did:\*\* Wrote correlated and non-correlated subqueries, derived table filtering,
+
+created vw\_student\_enrollment\_summary with CASE-based GPA conversion and WITH CHECK OPTION,
+
+wrote sp\_enroll\_student with duplicate check, sp\_transfer\_student with full transaction 
+
+and EXIT HANDLER rollback, tested SAVEPOINT partial rollback pattern.
+
+
+
+\*\*Takeaway:\*\* worked in MySQL
+
+
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_3.sql
 
