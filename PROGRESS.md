@@ -332,3 +332,33 @@ Why this matters more than any other DB hands-on: The N+1 problem is the single 
 
 \*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_4.sql + n\_plus\_one\_demo.py
 
+
+
+\## Day 13 — Thu Jul 2, 2026
+
+
+
+\*\*Track:\*\* Database HO5 — MongoDB ✅ Complete
+
+
+
+\*\*Time spent:\*\* \~55 min
+
+
+
+\*\*What I did:\*\* Created college\_nosql/feedback collection, inserted 10 documents
+
+including one without attachments field, ran all CRUD operations, built aggregation
+
+pipeline with $match/$group/$sort/$project/$round, built $unwind tag frequency
+
+leaderboard, created index and confirmed IXSCAN (totalDocsExamined: 3) vs COLLSCAN.
+
+
+
+\*\*Takeaway:\*\* 1st time worked on mongodb compass, firstly connect to local host then click -< symbol then a black prompt screen will be displayed there run the code.
+
+
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/mongodb/hands\_on\_5\_mongo.js
+
