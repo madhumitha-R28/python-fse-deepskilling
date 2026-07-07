@@ -362,3 +362,22 @@ leaderboard, created index and confirmed IXSCAN (totalDocsExamined: 3) vs COLLSC
 
 \*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/mongodb/hands\_on\_5\_mongo.js
 
+
+\## Day 14 — Fri Jul 3, 2026
+
+\*\*Track:\*\* Database HO6 — SQLAlchemy ORM ✅ Complete
+
+\*\*Time spent:\*\* \~55 min
+
+\*\*What I did:\*\* Defined 6 ORM model classes mirroring college\_db schema with 
+
+relationships and back\_populates, ran full CRUD via SQLAlchemy session API, 
+
+observed N+1 in echo output (Step 84), fixed with joinedload reducing queries 
+
+from 9 to 1 (Step 88), documented query count comparison at top of crud.py.
+
+\*\*Takeaway:\*\* created models.py and crud.py files
+
+\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/orm/models.py + crud.py
+
