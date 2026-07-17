@@ -1,0 +1,322 @@
+/* ============================================================
+   Digital Nurture 5.0 | Frontend HO2 | styles.css
+   CSS Flexbox, Grid & Responsive Design — Mobile-First
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   RESET (from HO1, unchanged)
+   ------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------------
+   BODY BASE
+   ------------------------------------------------------------ */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a1a2e;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   TASK 1: FLEXBOX HEADER & NAV (Steps 14–18)
+   Mobile-first: stacked by default, flex on 768px+
+   ============================================================ */
+
+/* Step 15: display:flex on header */
+header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Step 27: fluid typography with clamp()
+   clamp(min, preferred, max)
+   Font scales between 1.5rem and 2.5rem based on viewport width.
+   At 3vw = 1.5rem on ~500px viewport, 2.5rem on ~833px viewport.
+   No abrupt jumps — smooth scaling between breakpoints. */
+.site-name {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile: show hamburger placeholder, hide actual nav */
+.nav-mobile-placeholder {
+    display: block;
+    color: #c9d6e3;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Step 16: nav as flex container */
+nav {
+    display: none;   /* hidden on mobile — shown at 768px+ */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #c9d6e3;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   HERO SECTION — Flexbox column (Step 17)
+   Mobile-first: full-width, centred, stacked vertically
+   ============================================================ */
+
+/* Step 27: min-height: 40vh */
+#hero {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;    /* stack items vertically */
+    align-items: center;       /* centre horizontally */
+    justify-content: center;
+    text-align: center;
+    padding: 48px 24px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #ffffff;
+}
+
+#hero h1 {
+    /* Step 27: fluid heading size */
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1rem;
+    color: #c9d6e3;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+#hero button {
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#hero button:hover {
+    background-color: #ffffff;
+    color: #1a1a2e;
+}
+
+
+/* ------------------------------------------------------------
+   Step 18: STATS BAR — Flexbox with equal spacing
+   justify-content: space-evenly distributes items uniformly.
+   flex: 1 on each stat-item makes them share space equally.
+   ------------------------------------------------------------ */
+.stats-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px 16px;
+    gap: 16px;
+}
+
+.stat-item {
+    flex: 1;               /* each item grows equally to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: #c9d6e3;
+    text-align: center;
+}
+
+
+/* ============================================================
+   TASK 2: CSS GRID — COURSE CARDS (Steps 19–23)
+   Mobile-first: single column by default
+   ============================================================ */
+
+#courses {
+    padding: 40px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#courses h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    color: #1a1a2e;
+}
+
+/* Step 19-20: .course-grid as CSS Grid container
+   Mobile-first: 1 column by default.
+   Step 23: auto-fit + minmax — self-responsive grid.
+   auto-fit: fill available columns with as many tracks as fit.
+   minmax(280px, 1fr): each column minimum 280px, max equal share.
+   Result: 1 col on mobile, 2 on tablet, 3 on desktop —
+   NO media queries needed for this reflow. */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Step 21: course cards stretch to fill grid cell height */
+.course-card {
+    padding: 24px;
+    border: 1px solid #d1dce8;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    min-height: 160px;         /* Step 21: minimum height */
+    align-self: stretch;       /* Step 21: stretch to fill grid cell */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+    transform: translateY(-2px);
+}
+
+.course-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: #0f3460;
+}
+
+.course-card p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.credits {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0f3460;
+    background-color: #e8f0fe;
+    padding: 4px 10px;
+    border-radius: 12px;
+    align-self: flex-start;
+}
+
+
+/* ============================================================
+   TASK 3: MEDIA QUERIES (Steps 24–28)
+   Mobile-first: base styles above are for mobile (375px).
+   min-width queries ADD complexity for larger screens.
+   ============================================================ */
+
+/* Step 25: Tablet — 768px and above */
+@media (min-width: 768px) {
+
+    /* Show actual nav, hide hamburger */
+    nav {
+        display: block;
+    }
+
+    .nav-mobile-placeholder {
+        display: none;
+    }
+
+    /* Hero padding increase for tablet */
+    #hero {
+        padding: 64px 48px;
+    }
+
+    /* Step 25: 2-column grid at tablet
+       Note: auto-fit handles this automatically with minmax(280px)
+       but this makes the breakpoint explicit as required by the task */
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #courses {
+        padding: 48px 32px;
+    }
+}
+
+/* Step 26: Desktop — 1024px and above */
+@media (min-width: 1024px) {
+
+    /* Step 26: 3-column grid at desktop */
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Step 26: increase hero padding on desktop */
+    #hero {
+        padding: 96px 64px;
+        min-height: 50vh;
+    }
+
+    header {
+        padding: 20px 48px;
+    }
+
+    #courses {
+        padding: 64px 48px;
+    }
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+    text-align: center;
+    padding: 20px 24px;
+    background-color: #1a1a2e;
+    color: #8899aa;
+    font-size: 0.85rem;
+    margin-top: 40px;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — Digital Nurture 5.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER: Flexbox — site name left, nav right (Step 15) -->
+    <header>
+        <div class="site-name">🎓 Student Portal</div>
+
+        <!-- Mobile: hamburger placeholder shown via CSS at small viewports -->
+        <!-- Step 25: nav links hidden on mobile, shown at 768px+ -->
+        <div class="nav-mobile-placeholder">☰ Menu</div>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#grades">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION: Flexbox column, vertically centred (Step 17) -->
+        <!-- min-height: 40vh set in CSS (Step 27) -->
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Your one-stop dashboard to track courses, grades, and academic progress.</p>
+            <button>Explore Courses</button>
+
+            <!-- STATS BAR: Flexbox with equal spacing (Step 18) -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Courses Enrolled</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3.8</span>
+                    <span class="stat-label">GPA</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">Semester</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- COURSES SECTION: CSS Grid layout (Steps 19–23) -->
+        <section id="courses">
+            <h2>Your Enrolled Courses</h2>
+
+            <!-- Step 19: wrap articles in .course-grid div -->
+            <div class="course-grid">
+
+                <article class="course-card">
+                    <h3>Data Structures &amp; Algorithms</h3>
+                    <p>Master arrays, linked lists, trees, graphs, and complexity analysis.</p>
+                    <span class="credits">Credits: 4</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Database Management Systems</h3>
+                    <p>Learn relational design, SQL queries, normalization, and transactions.</p>
+                    <span class="credits">Credits: 3</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Object Oriented Programming</h3>
+                    <p>Apply encapsulation, inheritance, polymorphism, and design patterns.</p>
+                    <span class="credits">Credits: 4</span>
+                </article>
+
+                <!-- Step 22: two more cards to demonstrate auto-placement -->
+                <article class="course-card">
+                    <h3>Web Development Fundamentals</h3>
+                    <p>Build responsive web pages with HTML5, CSS3, and JavaScript ES6+.</p>
+                    <span class="credits">Credits: 3</span>
+                </article>
+
+                <article class="course-card">
+                    <h3>Python for Data Science</h3>
+                    <p>Analyse data using NumPy, Pandas, Matplotlib, and Scikit-learn.</p>
+                    <span class="credits">Credits: 4</span>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portal — Digital Nurture 5.0 | Python Full Stack Engineer Track</p>
+    </footer>
+
+</body>
+</html>
