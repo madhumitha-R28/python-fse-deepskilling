@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — HO4 Async JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Step 55: Axios via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .notification-card { background:#fff; border:1px solid #d1dce8; border-radius:8px; padding:16px; margin-bottom:12px; }
+        .notification-card h4 { color:#0f3460; margin-bottom:6px; font-size:0.95rem; }
+        .error-msg { color:#c0392b; font-weight:600; padding:12px; background:#ffeaea; border-radius:6px; }
+        #spinner { display:none; text-align:center; padding:20px; color:#0f3460; font-weight:600; }
+        #retry-btn { display:none; padding:8px 20px; background:#c0392b; color:#fff; border:none; border-radius:6px; cursor:pointer; margin-top:10px; }
+        #promise-all-result, #axios-result { padding:10px; background:#e8f0fe; border-radius:6px; margin:12px 0; font-size:0.9rem; }
+        #loading-msg { display:none; text-align:center; padding:20px; font-weight:600; color:#0f3460; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="site-name">🎓 Student Portal</div>
+        <nav><ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+        </ul></nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Async JavaScript in Action</h1>
+            <p>Fetch API, Promises, async/await and Axios — all demonstrated live.</p>
+        </section>
+
+        <section id="courses" style="padding:40px 32px; max-width:1100px; margin:0 auto;">
+            <h2>Courses (loaded after 1s simulated delay)</h2>
+            <p id="loading-msg">⏳ Loading courses...</p>
+            <div class="course-grid"></div>
+        </section>
+
+        <section style="padding:0 32px 40px; max-width:1100px; margin:0 auto;">
+            <h2>Promise.all Demo</h2>
+            <div id="promise-all-result">Fetching two users simultaneously...</div>
+
+            <h2 style="margin-top:32px;">Axios Demo</h2>
+            <div id="axios-result">Fetching with Axios...</div>
+
+            <h2 style="margin-top:32px;">Notifications (JSONPlaceholder /posts)</h2>
+            <div id="spinner">⏳ Loading notifications...</div>
+            <div id="notifications"></div>
+            <button id="retry-btn">🔄 Retry</button>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 Student Portal — HO4 Async JS</p></footer>
+    <script type="module" src="async.js"></script>
+</body>
+</html>

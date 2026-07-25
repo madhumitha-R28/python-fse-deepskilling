@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal — Digital Nurture 5.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="site-name">🎓 Student Portal</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#grades">Grades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <h1>Welcome to the Student Portal</h1>
+            <p>Your one-stop dashboard to track courses, grades, and academic progress.</p>
+            <button>Explore Courses</button>
+        </section>
+
+        <section id="courses">
+            <h2>Your Enrolled Courses</h2>
+
+            <!-- Step 40: Search input -->
+            <input
+                type="text"
+                id="search-courses"
+                placeholder="Search courses..."
+            />
+
+            <!-- Step 42: Sort button -->
+            <button id="sort-credits">Sort by Credits ↓</button>
+
+            <!-- Step 44: Selected course display -->
+            <div id="selected-course"></div>
+
+            <!-- Step 35: course-grid is EMPTY — JS renders cards -->
+            <div class="course-grid"></div>
+
+            <!-- Step 39: total credits — JS updates this -->
+            <p id="total-credits"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portal — Digital Nurture 5.0 | Python Full Stack Engineer Track</p>
+    </footer>
+
+    <!-- Step 30: type="module" enables ES6 import/export -->
+    <!-- Must be at end of body so DOM is ready when JS runs -->
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
