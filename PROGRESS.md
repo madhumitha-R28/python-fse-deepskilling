@@ -1,448 +1,140 @@
-\# Cognizant Digital Nurture 5.0 Progress Log
+# Daily Progress Log
+**Digital Nurture 5.0 | Python FSE Deep Skilling | Madhumitha R**
 
+---
 
+## Day 1 — Sat Jun 20, 2026
+**Track:** Selenium HO1, Task 1 (QA Concepts)
+**What I did:** Wrote test cases for 4 testing levels (Unit/Integration/System/UAT) applied to Course Management API, classified functional vs non-functional, explained black-box vs white-box testing, wrote 3 formal test cases for POST /api/courses/.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/qa_concepts.md
 
-\## Day 1 - Selenium Basics HO1 Task 1
-
-
-
-Completed:
-
-\- QA Concepts
-
-\- Testing Levels
-
-\- Functional vs Non-Functional Testing
-
-\- Black Box vs White Box Testing
-
-\- API Test Cases
-
-
-
-Status: Completed
+---
 
 ## Day 2 — Sun Jun 21, 2026
+**Track:** Selenium HO1, Task 2 — HO1 ✅ Complete
+**What I did:** Mapped full defect lifecycle including Rejected/Deferred/Reopened paths, classified severity and priority for 4 bugs, wrote complete defect report, explained severity vs priority with worked example.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/qa_concepts.md
 
-\*\*Track:\*\* Selenium HO1, Task 2 (Defect Lifecycle \& Severity Classification) — HO1 complete ✅
-
-
-
-\*\*Time spent:\*\* \~40 min
-
-
-
-\*\*What I did:\*\* Mapped the full defect lifecycle including Rejected/Deferred/Reopened paths,
-
-classified severity and priority for 4 hypothetical API bugs, wrote a complete formal defect
-
-report, explained severity vs priority with a worked example.
-
-
-
-\*\*Takeaway:\*\* understood the lifecycle of defect like how a unreviewed defect is identified and fixed by developer and also learnt about the difference between priority and severity in testing. thus the 1st hands-on task in selenium has been completed by completing 2 tasks.those 2 tasks were about understanding the concept , no practical stuff.
-
-
-
-\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/qa\_concepts.md
+---
 
 ## Day 3 — Mon Jun 22, 2026
+**Track:** Selenium HO2, Task 1 (V-Model Mapping)
+**What I did:** Drew V-Model with all phase mappings, documented test artifact per development phase, defined entry/exit criteria for all 4 testing levels, identified 2 early QA engagement points.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/v_model_analysis.md
 
-
-
-\*\*Track:\*\* Selenium HO2, Task 1 (V-Model Mapping)
-
-
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Drew the V-Model with all phase mappings, documented the test artifact
-
-
-
-produced during each development phase, defined entry/exit criteria for all 4 testing
-
-
-
-levels, identified 2 early QA engagement points on the left side of the V-Model.
-
-
-
-\*\*Takeaway:\*\* learnt about the process of v-model in which dev phase along with its corresponding test phase occurs simultaneously, though tests are executed later.which means only test plans are decided earlier during corresponding dev phase. then entry and exut criteria for each testing. then 2 engagement points of QA(quality assurance) in left dev phase.
-
-
-
-\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
+---
 
 ## Day 4 — Tue Jun 23, 2026
+**Track:** Selenium HO2, Task 2 — HO2 ✅ Complete
+**What I did:** Described 3 waterfall problems, mapped QA role in all 4 Agile ceremonies, applied 4 Shift-Left practices to Course Management API, wrote 3 Gherkin scenarios.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/v_model_analysis.md
 
-\*\*Track:\*\* Selenium HO2, Task 2 (Agile QA \& Shift-Left) — HO2 complete ✅
+---
 
+## Day 5 — Wed Jun 24, 2026
+**Track:** Selenium HO3, Task 1 (Automation Decision & ROI)
+**What I did:** Applied 5 automation criteria to POST /api/courses/, classified 6 test cases, calculated automation break-even at 8 runs, explained flaky tests with 3 fix strategies.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/automation_strategy.md
 
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Described 3 waterfall testing problems, mapped QA's role in all 4 Agile
-
-ceremonies, applied 4 Shift-Left practices to the Course Management API, wrote 3
-
-Given-When-Then Gherkin scenarios for the course creation user story.
-
-
-
-\*\*Takeaway:\*\* learnt about three problems with waterfall testing.qa engineer role in each agile ceremony , then about shift left practices and atlast 3 scenarios in integration testing.
-
-
-
-
-
-\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/v\_model\_analysis.md
-
-
-
-\## Day 5 — Wed Jun 24, 2026
-
-
-
-\*\*Track:\*\* Selenium HO3, Task 1 (Automation Decision \& ROI)
-
-
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Applied 5 automation criteria to POST /api/courses/, classified 6 test cases
-
-
-
-as Automate/Manual with justifications, calculated automation break-even at 8 runs with
-
-
-
-maintenance overhead analysis, explained flaky tests with 3 fix strategies.
-
-
-
-\*\*Takeaway:\*\* learnt about 5 criterias to check for automation eligibility.automate vs manual.automation ROI calculation and flaky test.
-
-
-
-\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/automation\_strategy.md
+---
 
 ## Day 6 — Thu Jun 25, 2026
+**Track:** Selenium HO3, Task 2 — HO3 ✅ Complete
+**What I did:** Compared all 5 automation framework types, recommended Hybrid for team scenario, described complete hybrid folder structure with design rationale.
+**Files:** SeleniumBasics/Madhumitha/written_exercises/automation_strategy.md
 
-
-
-\*\*Track:\*\* Selenium HO3, Task 2 (Framework Types) — HO3 complete ✅
-
-
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Compared all 5 automation framework types with advantages, disadvantages
-
-
-
-and Course Management examples, recommended Hybrid for the team scenario with justification
-
-
-
-for each requirement, described complete hybrid folder structure with design rationale.
-
-
-
-\*\*Takeaway:\*\* learnt abt 5 different automation types
-
-
-
-\*\*Files:\*\* SeleniumBasics/Madhumitha/written\_exercises/automation\_strategy.md
-
-
+---
 
 ## Day 7 — Fri Jun 26, 2026
+**Track:** Environment Setup
+**What I did:** Fixed MySQL and MongoDB PATH via Windows Environment Variables, installed selenium/pytest/pytest-html/webdriver-manager, verified all tools from CMD.
 
-
-
-\*\*Track:\*\* Environment Setup (no submission file)
-
-
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Fixed MySQL and MongoDB PATH entries via Windows Environment Variables,
-
-installed selenium/pytest/pytest-html/webdriver-manager, verified all tools from CMD.
-
-
-
-\*\*Takeaway:\*\* PATH issues are silent failures — always verify with --version after install.
-
-
-
-\*\*Files:\*\* None
+---
 
 ## Day 8 — Sat Jun 27, 2026
+**Track:** Database HO1 — Schema Design & DDL ✅ Complete
+**What I did:** Created college_db with 5 tables and FK constraints, documented 1NF/2NF/3NF analysis, ran ALTER TABLE operations. All 17 statements executed in MySQL 9.7.
+**Files:** Module3_DatabaseIntegration/Madhumitha/hands_on_1.sql
 
-
-
-\*\*Track:\*\* Database HO1 — Schema Design \& DDL ✅ Complete
-
-
-
-\*\*Time spent:\*\* \~50 min
-
-
-
-\*\*What I did:\*\* Created college\_db with all 5 tables and FK constraints, documented
-
-1NF/2NF/3NF analysis as SQL comments, ran all ALTER TABLE operations, inserted all
-
-sample data. All 17 statements executed with 0 errors in MySQL 9.7.
-
-
-
-\*\*Takeaway:\*\* One thing to absorb today: the creation order. departments must come before students, courses, professors — and enrollments must come last because it references both students and courses. Getting FK order wrong is the most common first-day SQL mistake and MySQL will throw errno: 150 if you try to reference a table that doesn't exist yet. You'll never forget this after seeing it fail once.
-
-
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_1.sql
+---
 
 ## Day 9 — Sun Jun 28, 2026
+**Track:** Frontend HO1 — HTML5 & CSS3 ✅ Complete
+**What I did:** Built Student Portal skeleton with semantic HTML5 elements, CSS3 reset, Flexbox header, hero section with hover button, course cards with box-shadow.
+**Files:** Module2_FrontendDev/Madhumitha/handson_01/index.html + styles.css
 
-
-
-\*\*Track:\*\* Frontend HO1, Tasks 1 \& 2 — HO1 complete ✅
-
-
-
-\*\*Time spent:\*\* \~45 min
-
-
-
-\*\*What I did:\*\* Built Student Portal skeleton with proper semantic elements
-
-(header/nav/main/section/article/footer), applied CSS3 reset, flex header,
-
-hero with hover button, course cards with box-shadow and border-radius.
-
-Validated HTML at W3C validator — zero errors.
-
-
-
-\*\*Takeaway:\*\* The validator catches structural HTML mistakes a browser won't — browsers are too forgiving, they silently fix broken HTML and render it anyway. So visually everything looks fine, but the underlying structure is wrong. Screen readers, search engines, and automated testing tools don't fix it silently — they break. Validation is how you prove your HTML is structurally sound, not just visually okay.
-
-
-
-\*\*Files:\*\* Module2\_FrontendDev/Madhumitha/handson\_01/index.html + styles.css
-
-
+---
 
 ## Day 10 — Mon Jun 29, 2026
+**Track:** Database HO2 — DML, Joins & Aggregations ✅ Complete
+**What I did:** INSERT/UPDATE/DELETE with previews, 5 single-table queries, 5 JOIN queries including LEFT JOIN + IS NULL pattern, 5 aggregation queries with HAVING filter.
+**Files:** Module3_DatabaseIntegration/Madhumitha/hands_on_2.sql
 
-
-
-\*\*Track:\*\* Database HO2 — DML, Joins \& Aggregations ✅ Complete
-
-
-
-\*\*Time spent:\*\* \~55 min
-
-
-
-\*\*What I did:\*\* INSERT/UPDATE/DELETE with row count verification, 5 single-table
-
-queries with WHERE/ORDER BY/LIKE/GROUP BY, 5 join queries including LEFT JOIN +
-
-IS NULL pattern for missing relationships, 5 aggregation queries with COUNT/AVG/
-
-ROUND and HAVING filter.
-
-
-
-\*\*Takeaway:\*\* worked in MySQL
-
-
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_2.sql
+---
 
 ## Day 11 — Tue Jun 30, 2026
+**Track:** Database HO3 — Subqueries, Views & Transactions ✅ Complete
+**What I did:** Correlated and non-correlated subqueries, derived table filtering, vw_student_enrollment_summary with CASE-based GPA, stored procedures with transactions and EXIT HANDLER, SAVEPOINT rollback.
+**Files:** Module3_DatabaseIntegration/Madhumitha/hands_on_3.sql
 
-
-
-\*\*Track:\*\* Database HO3 — Subqueries, Views \& Transactions ✅ Complete
-
-
-
-\*\*Time spent:\*\* \~55 min
-
-
-
-\*\*What I did:\*\* Wrote correlated and non-correlated subqueries, derived table filtering,
-
-created vw\_student\_enrollment\_summary with CASE-based GPA conversion and WITH CHECK OPTION,
-
-wrote sp\_enroll\_student with duplicate check, sp\_transfer\_student with full transaction
-
-and EXIT HANDLER rollback, tested SAVEPOINT partial rollback pattern.
-
-
-
-\*\*Takeaway:\*\* worked in MySQL
-
-
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_3.sql
+---
 
 ## Day 12 — Wed Jul 1, 2026
+**Track:** Database HO4 — Indexes, EXPLAIN & N+1 ✅ Complete
+**What I did:** EXPLAIN before/after indexes, created B-Tree index on enrollment_year and composite UNIQUE index, wrote Python script demonstrating N+1 (13 queries) vs joinedload (1 query).
+**Files:** Module3_DatabaseIntegration/Madhumitha/hands_on_4.sql + n_plus_one_demo.py
 
+---
 
+## Day 13 — Thu Jul 2, 2026
+**Track:** Database HO5 — MongoDB ✅ Complete
+**What I did:** Created college_nosql/feedback collection with 10 documents, ran CRUD ($set, $push, deleteMany), aggregation pipeline with $unwind tag frequency, confirmed IXSCAN in explain output.
+**Files:** Module3_DatabaseIntegration/Madhumitha/mongodb/hands_on_5_mongo.js
 
-\*\*Track:\*\* Database HO4 — Indexes, EXPLAIN \& N+1 Problem ✅ Complete
+---
 
+## Day 14 — Fri Jul 3, 2026
+**Track:** Database HO6 — SQLAlchemy ORM ✅ Complete
+**What I did:** Defined 6 ORM model classes with relationships, ran CRUD via session, observed N+1 in echo output (Step 84), fixed with joinedload (1 LEFT OUTER JOIN query).
+**Files:** Module3_DatabaseIntegration/Madhumitha/orm/models.py + crud.py
 
-
-\*\*Time spent:\*\* \~50 min
-
-
-
-\*\*What I did:\*\* Ran EXPLAIN before/after indexes, created B-Tree index on enrollment\_year,
-
-composite UNIQUE index on enrollments(student\_id, course\_id), index on course\_code,
-
-documented partial index concept with MySQL equivalent. Wrote Python script demonstrating
-
-N+1 (13 queries) vs optimised JOIN (1 query) with Django ORM translation.
-
-
-
-\*\*Takeaway:\*\* This one has two output files — hands\_on\_4.sql for the SQL work and n\_plus\_one\_demo.py for the Python comparison.
-
-Why this matters more than any other DB hands-on: The N+1 problem is the single most common performance bug introduced by developers using ORMs. Django's ORM does lazy loading by default — every time you access enrollment.student inside a loop, it silently fires a separate SQL query. On 10 rows in development it's invisible. On 10,000 rows in production it's 10,001 queries instead of 1, and your API response time goes from 50ms to 30 seconds. This is the thing that makes senior engineers wince when they see a junior's code.
-
-
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/hands\_on\_4.sql + n\_plus\_one\_demo.py
-
-
-
-\## Day 13 — Thu Jul 2, 2026
-
-
-
-\*\*Track:\*\* Database HO5 — MongoDB ✅ Complete
-
-
-
-\*\*Time spent:\*\* \~55 min
-
-
-
-\*\*What I did:\*\* Created college\_nosql/feedback collection, inserted 10 documents
-
-including one without attachments field, ran all CRUD operations, built aggregation
-
-pipeline with $match/$group/$sort/$project/$round, built $unwind tag frequency
-
-leaderboard, created index and confirmed IXSCAN (totalDocsExamined: 3) vs COLLSCAN.
-
-
-
-\*\*Takeaway:\*\* 1st time worked on mongodb compass, firstly connect to local host then click -< symbol then a black prompt screen will be displayed there run the code.
-
-
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/mongodb/hands\_on\_5\_mongo.js
-
-
-
-\## Day 14 — Fri Jul 3, 2026
-
-\*\*Track:\*\* Database HO6 — SQLAlchemy ORM ✅ Complete
-
-\*\*Time spent:\*\* \~55 min
-
-\*\*What I did:\*\* Defined 6 ORM model classes mirroring college\_db schema with
-
-relationships and back\_populates, ran full CRUD via SQLAlchemy session API,
-
-observed N+1 in echo output (Step 84), fixed with joinedload reducing queries
-
-from 9 to 1 (Step 88), documented query count comparison at top of crud.py.
-
-\*\*Takeaway:\*\* created models.py and crud.py files
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/orm/models.py + crud.py
+---
 
 ## Day 15 — Thu Jul 17, 2026
+**Track:** Database HO7 — Alembic Migrations ✅ Complete | Database Track ✅ COMPLETE
+**What I did:** Initialised Alembic, generated 3 migrations (initial schema, is_active column, course_schedules table), manually fixed empty autogenerate migration, verified downgrade/upgrade cycle.
+**Files:** Module3_DatabaseIntegration/Madhumitha/orm/migrations/
 
-\*\*Track:\*\* Database HO7 — Alembic Migrations ✅ Complete
-
-\*\*Database Track:\*\* ALL 7 HANDS-ON COMPLETE ✅
-
-\*\*Time spent:\*\* \~60 min
-
-\*\*What I did:\*\* Initialised Alembic, configured env.py with Base.metadata, generated
-
-baseline migration (0212acadfbf7), incremental migrations for is\_active column
-
-(c5a2686a5d00) and course\_schedules table (b85b654b287e), manually fixed empty
-
-autogenerate migration, verified downgrade -1 drops is\_active, downgrade base
-
-removes all tables, upgrade head restores full schema including is\_active.
-
-\*\*Takeaway:\*\* Always inspect autogenerated migrations before applying — Alembic
-
-silently generates empty pass migrations when create\_all() has already created
-
-the tables, bypassing version tracking.
-
-\*\*Files:\*\* Module3\_DatabaseIntegration/Madhumitha/orm/migrations/
+---
 
 ## Day 16 — Thu Jul 17, 2026
+**Track:** Frontend HO2 — Flexbox, Grid & Responsive Design ✅ Complete
+**What I did:** Flexbox header and stats bar, CSS Grid with auto-fit/minmax, mobile-first breakpoints at 768px and 1024px, fluid typography with clamp(), min-height: 40vh on hero.
+**Files:** Module2_FrontendDev/Madhumitha/handson_02/index.html + styles.css
 
+---
 
+## Day 17 — Sat Jul 25, 2026
+**Track:** Frontend HO3–6 + HO5+HO6 React ✅ Complete
+**What I did:** HO3 ES6+ DOM manipulation with DocumentFragment and event delegation. HO4 async JS with Fetch, Promises, async/await, Axios interceptors. HO5+HO6 React app with hooks, React Router, Context API, Redux Toolkit — course cards, search, enroll/unenroll working.
+**Files:** Module2_FrontendDev/Madhumitha/handson_03–06 + handson_05_react/
 
-\*\*Track:\*\* Frontend HO2 — Flexbox, Grid \& Responsive Design ✅ Complete
+---
 
+## Day 18 — Sun Jul 26, 2026
+**Track:** Frontend HO7 Angular + HO8 Vue ✅ Complete
+**What I did:** Angular 19 standalone components, services, reactive forms with Validators, ngFor/ngIf, RouterLink. Vue 3 Composition API, Pinia store with totalCredits computed, Vue Router, v-model search.
+**Files:** Module2_FrontendDev/Madhumitha/handson_07_angular/ + handson_08_vue/
 
+---
 
-\*\*Time spent:\*\* \~50 min
+## Day 19 — Mon Jul 27, 2026
+**Track:** Frontend HO9–10 + Backend HO1–10 ✅ Complete | ALL TRACKS ✅ COMPLETE
+**What I did:** Accessibility audit (ARIA, keyboard nav, contrast ratios). Django DRF API with models/serializers/viewsets/router running at /api/. FastAPI with Swagger UI showing all CRUD endpoints. Flask app factory + SQLAlchemy. JWT auth with bcrypt. Microservices (CourseService, StudentService, Gateway) generated and verified.
+**Files:** All PythonBackendFrameworks/Madhumitha/ + accessibility_and_state.md
 
+---
 
-
-\*\*What I did:\*\* Upgraded Student Portal with Flexbox header (justify-content: 
-
-
-
-space-between), Flexbox hero (flex-direction: column), stats bar with flex:1 
-
-
-
-equal spacing, CSS Grid course layout with auto-fit/minmax (self-responsive, 
-
-
-
-no media queries needed), mobile-first CSS with breakpoints at 768px and 1024px, 
-
-
-
-fluid typography with clamp(), min-height: 40vh on hero.
-
-
-
-\*\*Takeaway:\*\* Why Flexbox vs Grid matters as a developer: These aren't just layout tools — they're the mental model behind every UI component you'll build in React and Angular later. Flexbox is one-dimensional (nav bars, button groups, card footers). Grid is two-dimensional (card layouts, dashboard panels, page structure). Choosing the wrong one leads to hacky CSS that breaks on resize. The auto-fit + minmax pattern in Task 2 is the single most useful CSS trick you'll use in production — it gives you a fully responsive grid with zero media queries.
-
-
-
-\*\*Files:\*\* Module2\_FrontendDev/Madhumitha/handson\_02/index.html + styles.css
-
+## 🏁 Program Complete — July 28, 2026
+**34 hands-on exercises | 4 tracks | 19 active working days**
+Django REST API ✅ | FastAPI Swagger ✅ | React Portal ✅ | Angular Portal ✅ | Vue Portal ✅ | Selenium POM Suite ✅ | MySQL college_db ✅ | MongoDB feedback ✅ | Alembic migrations ✅
